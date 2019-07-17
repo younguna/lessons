@@ -68,5 +68,29 @@
 - 단순히 원격 저장소의 내용을 확인만 하고 로컬 데이터와 병합은 하고 싶지 않은 경우에는 `git fetch` 명령어를 사용할 수 있습니다.
 - fetch한 상태에서 원격 저장소의 내용을 로컬 저장소의 master 브랜치에 통합하고 싶은 경우에는, "FETCH_HEAD" 브랜치를 merge하면 됩니다. pull 명령어는 내부적으로 fetch + merge 입니다.
 
-#### Question
-git pull 하면 모든 브랜치 다 갱신하는가?
+## github fork에서 pull request까지
+- 원본 원격저장소에서 사용자의 원격저장소로 복사(fork) 함
+	- 실질적으로 git clone. 원격 저장소내의 기능
+- 사용자의 원격 저장소에서 사용자 개인 로컬저장소로 복사(clone) 함
+- 로컬 저장소에서 작업 후 add 명령어를 이용해 stage에 올림
+- commit 명령어로 stage에 올라간 변경사항을 확정
+- push를 이용해 로컬 저장소에 commit된 변경사항을 원격 저장소에 반영
+- pull request(PR)를 이용해 개인 원격저장소의 변경 사항을 원본 원격저장소에 반영요청
+	- 이때 여러가지의 상황에 따라 브랜치간으로 이루어 질 수 있음
+- 승인이 이루어지면 원격저장소에 변경 사항 반영
+
+## git add 와 git commit 시 git의 내부
+- `git add` 동작을 수행하면 index(스테이지) 에 object 이름과 실제 파일 이름이 추가되고, 오브젝트에 blob 타입으로 파일 내용이 추가됨
+- blob 파일이란 바이너리 라지 오브젝트의 약자로, 대용량 데이터를 저장하기 위한 이진 데이터의 모임을 말함 
+- `git commit` 동작을 수행하면 object에 commit 객체와 tree객체가 추가됨 
+- tree 객체는 스테이지에 올라온 것들을 snapshot 을 찍어 저장하고, commit객체는 만들어진 tree 객체와 부가적인 정보를 저장함
+
+## git-workflow 
+- git-workflow가 필요한 이유는 안전한 개발을 위해서임
+- 개발자가 자유롭고 안전하게 개발할 수 있어 개발 생산성을 향상시킴
+- 대표적인 git-branch 전략은 master와 develop, feature, release, hotfix로 구분해서 필요에따라 생성해 작업하는 전략을 말함
+- `develop` 브랜치의 경우 다음 출시 버전을 개발하는 브랜치
+- `feature` 브랜치의 경우 기능을 개발하는 브랜치
+- `release` 브랜치는 이전 출시 버전을 준비하는 브랜치
+- `hotfix` 브랜치는 출시 버전에서 발생한 버그를 수정하는 브랜치
+- 팀의 상황에 따라 여러가지로 branch를 유지할 수 있음
