@@ -10,7 +10,7 @@
 
 
 
-- '==' 와 '==='의 차이
+- == 와 ===의 차이
 	> == : 자료형이 달라도 값이 같다면 true 
 	>
 	> === : 자료형이 같으면서 값이 같아야 true
@@ -35,7 +35,7 @@
 
 	- 일반적 함수 표현
 
-    ```
+    ```js
     function test() { 
     console.log('ㅇ'); 
     }
@@ -43,14 +43,14 @@
 
  	- 변수를 이용한 함수 표현
 
-    ```
+    ```js
     const printName = function() {
     return 'ㅇ';
     }
     ```
   	- arrow function
 
-    ```
+    ```js
     const getName = (name) => "Kim " + name;
     ```
 
@@ -66,7 +66,7 @@
 
   - 구조 분해 할당
 
-    > ```
+    > ```js
     > let arr = [1, 2];
     > const [a, b] = arr;
     > ```
