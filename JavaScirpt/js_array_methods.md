@@ -1,10 +1,3 @@
-forEach, map, filter, reduce, some, every 메서드의 용도를 정확히 구분할 수 있는가?
-sk이외 다른 type에서도 잘 동작하는가 ?
-다같이 확인할 사항
-각자 만든 reduce를 리뷰하고, 버그없고 가장 효율적으로 동작하는 customReduce 함수를 구현해보자.
-reduce의 몇몇 활용 예시를 찾아보고 정리한다.
-함수형 프로그래밍에서는 forEach, map, filter를 어떤 식으로 사용하는가? 알아보고 정리한다
-
 # JavaScript Array Methods
 
 ## forEach
