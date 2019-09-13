@@ -1,0 +1,518 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Network basics · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="logic-gate-basics.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../JavaScript/">
+            
+                <a href="../JavaScript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../JavaScript/es6-basics.html">
+            
+                <a href="../JavaScript/es6-basics.html">
+            
+                    
+                    ES6 Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../JavaScript/__proto__-vs-prototype.html">
+            
+                <a href="../JavaScript/__proto__-vs-prototype.html">
+            
+                    
+                    proto VS prototype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../JavaScript/const-and-immutable-array.html">
+            
+                <a href="../JavaScript/const-and-immutable-array.html">
+            
+                    
+                    Const statement and immutable array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../javascript/isNaN-and-isArray.html">
+            
+                <a href="../javascript/isNaN-and-isArray.html">
+            
+                    
+                    isNaN and isArray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../JavaScript/javascript-asynchronous.html">
+            
+                <a href="../JavaScript/javascript-asynchronous.html">
+            
+                    
+                    Asynchronous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../JavaScript/let-and-closure.html">
+            
+                <a href="../JavaScript/let-and-closure.html">
+            
+                    
+                    Let statement and closure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../JavaScript/array-methods.html">
+            
+                <a href="../JavaScript/array-methods.html">
+            
+                    
+                    Array Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../JavaScript/numbers-and-parseInt.html">
+            
+                <a href="../JavaScript/numbers-and-parseInt.html">
+            
+                    
+                    numbers() and parseInt()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    CS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="logic-gate-endians.html">
+            
+                <a href="logic-gate-endians.html">
+            
+                    
+                    Logic gate endians
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="logic-gate-basics.html">
+            
+                <a href="logic-gate-basics.html">
+            
+                    
+                    Logic gate basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="network-basics.html">
+            
+                <a href="network-basics.html">
+            
+                    
+                    Network basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Network basics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="network-basics">Network Basics</h1>
+<h2 id="&#xCEF4;&#xD4E8;&#xD130;-&#xB124;&#xD2B8;&#xC6CC;&#xD06C;-&#xC544;&#xD0A4;&#xD14D;&#xCCD0;-&#xACC4;&#xCE35;layer-&#xD328;&#xD134;">&#xCEF4;&#xD4E8;&#xD130; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xC544;&#xD0A4;&#xD14D;&#xCCD0;, &#xACC4;&#xCE35;(Layer) &#xD328;&#xD134;</h2>
+<table>
+<thead>
+<tr>
+<th>TCP/IP Layers</th>
+<th>OSI 7 Layers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application Layer</td>
+<td>Application Layer</td>
+</tr>
+<tr>
+<td>^</td>
+<td>Presentation Layer</td>
+</tr>
+<tr>
+<td>^</td>
+<td>Session Layer</td>
+</tr>
+<tr>
+<td>Transport Layer</td>
+<td>Transport Layer</td>
+</tr>
+<tr>
+<td>Internet Layer</td>
+<td>Network Layer</td>
+</tr>
+<tr>
+<td>Network Access Layer</td>
+<td>Data Link Layer</td>
+</tr>
+<tr>
+<td>^</td>
+<td>Physical Layer</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>&#xB808;&#xC774;&#xC5B4; &#xD328;&#xD134;&#xC758; &#xAC01; &#xACC4;&#xCE35;&#xC740; &#xC778;&#xC811;&#xD55C; &#xACC4;&#xCE35; &#xAC04;&#xC758; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB9CC; &#xC54C; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>&#xAC01; &#xACC4;&#xCE35;&#xC740; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xD1B5;&#xD574; &#xC54C;&#xB824;&#xC900; &#xC815;&#xBCF4;&#xB97C; &#xC81C;&#xC678;&#xD558;&#xACE0;&#xB294; &#xC0C1;&#xD638; &#xC804;&#xB2EC;&#x3137;&#xD558;&#xB294; &#xB370;&#xC774;&#xD130;&#xC758; &#xB0B4;&#xC6A9;&#xC774; &#xBB34;&#xC5C7;&#xC778;&#xC9C0; &#xC54C;&#xC9C0; &#xBABB;&#xD55C;&#xB2E4;.</li>
+</ul>
+<p>&#xC704;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xC2E4;&#xC81C; &#xC0C1;&#xD669;&#xC758; &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xC0DD;&#xAC01;&#xD574; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<ul>
+<li>3&#xCE35;&#xC758; &#xD300;&#xC740; &#xBB3C;&#xAC74;&#xC744; &#xBC15;&#xC2A4;&#xC5D0; &#xB123;&#xC5B4; &#xD3EC;&#xC7A5;&#xD558;&#xB294; &#xC791;&#xC5C5;&#xC744; &#xD55C; &#xB4A4; &#xBAA9;&#xC801;&#xC9C0;&#xC758; ID&#xB97C; 2&#xCE35;&#xC73C;&#xB85C; &#xC804;&#xB2EC; &#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>2&#xCE35;&#xC758; &#xD300;&#xC740; &#xC704;&#xB97C; &#xBC1B;&#xC544;&#xC11C; &#xBE44;&#xB2D0;&#xB85C; &#xD3EC;&#xC7A5;&#xD55C; &#xB4A4; &#xBAA9;&#xC801;&#xC9C0; ID&#xB97C; &#xC870;&#xD68C;&#xD558;&#xC5EC; &#xC8FC;&#xC18C;&#xD0DC;&#xADF8;&#xB97C; &#xBD99;&#xC774;&#xB294; &#xC791;&#xC5C5;&#xC744;  &#xD558;&#xACE0; 1&#xCE35;&#xC73C;&#xB85C; &#xC804;&#xB2EC; &#xD560; &#xB54C; &#xC2DC;/&#xB3C4; &#xAD6C;&#xBD84;&#xB41C; &#xBC15;&#xC2A4;&#xC5D0; &#xB098;&#xB204;&#xC5B4; &#xC804;&#xB2EC; &#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>1&#xCE35;&#xC758; &#xD300;&#xC740; &#xC2DC;/&#xB3C4;&#xB85C; &#xAD6C;&#xBD84;&#xB41C; &#xBC15;&#xC2A4;&#xC5D0; &#xC788;&#xB294; &#xBB3C;&#xAC74;&#xC744; &#xD574;&#xB2F9; &#xD558;&#xB294; &#xC9C0;&#xC5ED;&#xAD6C; &#xCCB4;&#xC778;&#xC810;&#xC5D0; &#xBC30;&#xB2EC;&#xD558;&#xB294; &#xC791;&#xC5C5;&#xC744; &#xD569;&#xB2C8;&#xB2E4;.</li>
+</ul>
+<p>&#xB9CC;&#xC57D; &#xC704;&#xC758; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xB2E4;&#xB978; &#xB098;&#xB77C;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;&#xACE0; &#xD558;&#xBA74; 2&#xCE35;&#xD300;&#xB9CC; &#xBC14;&#xAFB8;&#xBA74; &#xADF8;&#xB300;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83;&#xC774; &#xBC14;&#xB85C; &#xB808;&#xC774;&#xC5B4; &#xD328;&#xD134;&#xC758; &#xD575;&#xC2EC;&#xC785;&#xB2C8;&#xB2E4;. &#xBC14;&#xB85C; &#xD2B9;&#xC815; &#xACC4;&#xCE35;&#xC758; &#xAE30;&#xC220; &#xBCC0;&#xACBD;&#xC774; &#xB9E4;&#xC6B0; &#xC6A9;&#xC774;&#xD574; &#xC9D1;&#xB2C8;&#xB2E4;.</p>
+<ul>
+<li>&#xC720;&#xC120;&#xC744; &#xBB34;&#xC120;&#xC73C;&#xB85C; &#xBC14;&#xAFBC;&#xB2E4;&#xBA74; Data Link &#xAC8C;&#xCE35;&#xC758; &#xC774;&#xB354;&#xB137; &#xAE30;&#xC220;&#xB9CC; Wifi&#xB098; LTE&#xB85C; &#xBC14;&#xAFB8;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</li>
+</ul>
+<blockquote>
+<p>&#xC774;&#xB7F0; &#xB808;&#xC774;&#xC5B4; &#xD328;&#xD134;&#xC758; &#xB2E8;&#xC810;&#xC740; &#xB2E4;&#xB978; &#xACC4;&#xCE35;&#xC5D0;&#xC11C; &#xBB34;&#xC5C7;&#xC744; &#xD558;&#xB294; &#xAC83;&#xC778;&#xC9C0; &#xC804;&#xD600; &#xBAA8;&#xB974;&#xACE0; &#xB2E8;&#xC21C;&#xD788; &#xC815;&#xD574;&#xC9C4; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xB300;&#xB85C; &#xB0B4;&#xC6A9;&#xC744; &#xC8FC;&#xACE0; &#xBC1B;&#xAE30;&#xB9CC; &#xD560; &#xC218; &#xC788;&#xB2E4;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+</blockquote>
+<h3 id="osi-7-&#xACC4;&#xCE35;">OSI 7 &#xACC4;&#xCE35;</h3>
+<ul>
+<li>&#xD55C;&#xAD6D;&#xC5B4;&#xB85C;&#xB294; &#xBB3C;&#xB9AC;, &#xB370;&#xC774;&#xD130;&#xB9C1;&#xD06C;, &#xB124;&#xD2B8;&#xC6CC;&#xD06C;, &#xC804;&#xC1A1;, &#xC138;&#xC158;, &#xD45C;&#xD604;, &#xC751;&#xC6A9; &#xACC4;&#xCE35;&#xC774;&#xB77C; &#xBD88;&#xB9AC;&#xC6B4;&#xB2E4;.</li>
+<li>&#xB2E8;&#xC21C;&#xD788; &#xC22B;&#xC790;&#xB97C; &#xBD99;&#xC5EC; 1-7 &#xACC4;&#xCE35; &#xC774;&#xB77C;&#xACE0;&#xB3C4; &#xD45C;&#xD604; &#xD55C;&#xB2E4;.</li>
+<li>TCP/IP &#xACC4;&#xCE35;&#xACFC;&#xC758; &#xB9F5;&#xD551;<ul>
+<li>Network Access Layer -&gt; Physical Layer, Data Link Layer</li>
+<li>Internet Layer -&gt; Network Layer</li>
+<li>Transport Layer -&gt; Transport Layer</li>
+<li>Application Layer -&gt; Application Layer, Presentation Layer, Session Layer</li>
+</ul>
+</li>
+<li>TCP/IP &#xACC4;&#xCE35;&#xC5D0;&#xC11C; OSI&#xC758; 1,2 &#xACC4;&#xCE35;&#xC774; &#xD569;&#xCCD0;&#xC9C4; &#xC774;&#xC720;&#xB294; &#xC2E4;&#xC81C; &#xC7A5;&#xBE44;&#xB4E4;&#xC774; &#xD569;&#xCCD0;&#xC11C; &#xB098;&#xC624;&#xAE30; &#xB54C;&#xBB38;&#xC774;&#xB2E4;.<ul>
+<li>&#xC6B0;&#xB9AC;&#xAC00; &#xAD6C;&#xB9E4;&#xD558;&#xB294; &#xC774;&#xB354;&#xB137; &#xB79C;&#xCE74;&#xB4DC;/Wifi &#xB79C;&#xCE74;&#xB4DC;/&#xBE14;&#xB8E8;&#xD22C;&#xC2A4; &#xC7A5;&#xBE44;&#xB294; &#xBB3C;&#xB9AC;&#xACC4;&#xCE35;&#xACFC; &#xB370;&#xC774;&#xD130; &#xB9C1;&#xD06C; &#xACC4;&#xCE35;&#xC774; &#xD569;&#xCCD0;&#xC838; &#xC788;&#xB2E4;.</li>
+<li>OSI 1,2&#xACC4;&#xCE35;&#xC740; &#xC6CC;&#xB099; &#xBC00;&#xC811;&#xD55C; &#xAD00;&#xACC4;&#xAC00; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB458;&#xC744; &#xD569;&#xCCD0;&#xB3C4; &#xD070; &#xBB38;&#xC81C;&#xAC00; &#xC0DD;&#xAE30;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<h4 id="tcpip-transport-layer-internet-layer-osi-transport-network-layer">TCP/IP Transport Layer, Internet Layer (OSI Transport, Network Layer)</h4>
+<ul>
+<li>OSI &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xACC4;&#xCE35;&#xC5D0; &#xC218; &#xB9CE;&#xC740; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC774; &#xC788;&#xC9C0;&#xB9CC; TCP&#xB97C; &#xC804;&#xC1A1;&#xACC4;&#xCE35;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD560; &#xB550; &#xB124;&#xD2B8;&#xC6CC;&#xD06C;&#xACC4;&#xCE35;&#xC5D0;&#xC11C;&#xB294; &#xC778;&#xD130;&#xB137; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;(IP)&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+<h4 id="tcpip-application-layer-osi-application-presentaion-session-layer">TCP/IP Application Layer (OSI Application, Presentaion, Session Layer)</h4>
+<ul>
+<li>TCP/IP&#xC758; &#xC751;&#xC6A9;&#xACC4;&#xCE35;&#xC740; OSI&#xC758; &#xC751;&#xC6A9;/&#xD45C;&#xD604;/&#xC138;&#xC158; &#xACC4;&#xCE35;&#xC744; &#xD569;&#xCCD0;&#xC11C; &#xD45C;&#xD604;&#xD558;&#xC600;&#xC2B5;&#xB2C8;&#xB2E4;.<ul>
+<li>&#xC751;&#xC6A9;&#xACC4;&#xCE35;&#xC758; &#xB300;&#xD45C;&#xC801;&#xC778; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC740; HTTP/FTP/SSH&#xB4F1;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xD558;&#xC9C0;&#xB9CC; &#xC704;&#xC5D0;&#xB294; &#xC138;&#xC158;&#xACFC; &#xD45C;&#xD604; &#xACC4;&#xCE35;&#xC5D0;&#xC11C; &#xD558;&#xB294; &#xC77C;&#xC774; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xB300;&#xBD80;&#xBD84;&#xC758; &#xC751;&#xC6A9; &#xACC4;&#xCE35; &#xD504;&#xB85C;&#xD1A0;&#xCF5C; &#xC124;&#xACC4;&#xC2DC; &#xC138;&#xC158;&#xACFC; &#xD45C;&#xD604;&#xC758; &#xBA85;&#xC138;&#xAC00; &#xBE60;&#xC9C0;&#xAE30; &#xD798;&#xB4ED;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC704;&#xC758; &#xC774;&#xC720;&#xB85C; &#xD558;&#xB098;&#xC758; &#xC751;&#xC6A9; &#xACC4;&#xCE35;&#xC73C;&#xB85C; &#xD569;&#xCE5C; &#xAC83;&#xC73C;&#xB85C; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<h4 id="osi-physical-layer-tcpip-network-access-layer">OSI Physical Layer (TCP/IP Network Access Layer)</h4>
+<ul>
+<li>&#xC2E4;&#xC81C;&#xB85C; &#xBB3C;&#xB9AC;&#xC801;&#xC778; &#xAE30;&#xB2A5;&#xC744; &#xD558;&#xB294; &#xACC4;&#xCE35;&#xC774;&#xB2E4;.</li>
+<li>&#xC774; &#xACC4;&#xCE35;&#xC5D0;&#xC11C; &#xC911;&#xC694;&#xD55C; &#xAC83;&#xC740; &#xC2E0;&#xD638;&#xC774;&#xB2E4;.</li>
+<li>&#xBB3C;&#xB9AC; &#xACC4;&#xCE35;&#xC774; &#xB2F4;&#xB2F9;&#xD558;&#xB294; &#xAC83;&#xC740; &#xC544;&#xB0A0;&#xB85C;&#xADF8; &#xC2E0;&#xD638;&#xB97C; &#xB514;&#xC9C0;&#xD138;&#xB85C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</li>
+<li>&#xB300;&#xD45C;&#xC801;&#xC778; &#xB124;&#xD2B8;&#xC6CC;&#xD06C; &#xC7A5;&#xBE44;&#xB294; &#xD5C8;&#xBE0C;(HUB)&#xC774;&#xB2E4;.</li>
+<li>&#xC8FC;&#xC18C;&#xB294; &#xC5C6;&#xB2E4;. &#xBB3C;&#xB9AC;&#xC801;&#xC73C;&#xB85C; &#xC5F0;&#xACB0;&#xB41C; &#xC7A5;&#xBE44;&#xAC00; &#xD1B5;&#xC2E0;&#xC744; &#xD558;&#xB294; &#xBAA9;&#xC801;&#xC9C0; &#xC774;&#xB2E4;.</li>
+</ul>
+<h4 id="osi-data-link-layer-tcpip-network-access-layer">OSI Data Link Layer (TCP/IP Network Access Layer)</h4>
+<ul>
+<li>&#xBCF8;&#xACA9;&#xC801;&#xC73C;&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB2E4;&#xB8E8;&#xB294; &#xACC4;&#xCE35;&#xC774;&#xB2E4;.</li>
+<li>&#xBB3C;&#xB9AC; &#xACC4;&#xCE35;&#xC744; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC1A1;&#xC218;&#xC2E0; &#xD558;&#xB294; &#xAE30;&#xB2A5;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB2E4;.</li>
+<li>&#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xB370;&#xC774;&#xD130; &#xB2E8;&#xC704;&#xB294; <strong>&quot;&#xD504;&#xB808;&#xC784; (frame)&quot;</strong> &#xC774;&#xB2E4;</li>
+<li>&#xB370;&#xC774;&#xD130; &#xB9C1;&#xD06C; &#xACC4;&#xCE35;&#xC740; &#xACE0;&#xC720;&#xC758; &#xC8FC;&#xC18C;&#xB97C; &#xAC00;&#xC9C0;&#xBA70; &#xC774;&#xB97C; <strong>&#xBB3C;&#xB9AC;&#xC8FC;&#xC18C;</strong> &#xD639;&#xC740; <strong>MAC&#xC8FC;&#xC18C;</strong>&#xB77C;&#xACE0; &#xB9D0;&#xD55C;&#xB2E4;.</li>
+<li>&#xB370;&#xC774;&#xD130; &#xB9C1;&#xD06C; &#xACC4;&#xCE35;&#xC758; &#xC804;&#xC1A1; &#xBC94;&#xC704;&#xB294; &#xBB3C;&#xB9AC;&#xC801;&#xC73C;&#xB85C; &#xC5F0;&#xACB0;&#xB41C; &#xC774;&#xC6C3; &#xCEF4;&#xD4E8;&#xD130;&#xC774;&#xB2E4;(&#xD639;&#xC740; &#xD5C8;&#xBE0C;, &#xC2A4;&#xC704;&#xCE58;).</li>
+<li>&#xB370;&#xC774;&#xD130; &#xB9C1;&#xD06C; &#xACC4;&#xCE35;&#xC740; &#xC774;&#xB807;&#xAC8C; &#xC774;&#xC6C3;&#xC5D0;&#xAC8C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC804;&#xB2EC;&#xD558;&#xB294; &#xAC83;&#xC774; &#xBAA8;&#xB4E0; &#xC784;&#xBB34;&#xC774;&#xBA70; &#xD504;&#xB808;&#xC784;&#xC774; &#xBAA9;&#xC801;&#xC9C0;&#xB85C; &#xC804;&#xB2EC; &#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xB3C4; &#xD558;&#xACE0; &#xC624;&#xB958; &#xCCB4;&#xD06C;&#xB3C4; &#xD558;&#xACE0; &#xC7AC;&#xC804;&#xC1A1; &#xD558;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;.</li>
+<li><strong>&#xB370;&#xC774;&#xD130;&#xB9C1;&#xD06C; &#xACC4;&#xCE35;&#xC744; &#xD1B5;&#xD574; &#xC1A1;&#xC218;&#xC2E0;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB294; &#xC5F0;&#xACB0; &#xC0C1;&#xC5D0; &#xBB38;&#xC81C;&#xB9CC; &#xC5C6;&#xB2E4;&#xBA74; &#xC81C;&#xB300;&#xB85C; &#xC804;&#xB2EC;&#xB418;&#xC5C8;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</strong></li>
+<li>&#xC774; &#xACC4;&#xCE35;&#xC758; &#xB300;&#xD45C;&#xC801;&#xC778; &#xC7A5;&#xBE44;&#xB294; &#xC2A4;&#xC704;&#xCE58; &#xC774;&#xB2E4;.<ul>
+<li>&#xC2A4;&#xC704;&#xCE58;&#xB294; &#xD5C8;&#xBE0C;&#xC640; &#xC0DD;&#xAE34; &#xAC83;&#xC774; &#xBE44;&#xC2B7;&#xD558;&#xB098; &#xD5C8;&#xBE0C;&#xC640;&#xB294; &#xB2EC;&#xB9AC; &#xC2A4;&#xC704;&#xCE58;&#xB294; &#xB370;&#xC774;&#xD130; &#xB9C1;&#xD06C; &#xACC4;&#xCE35; &#xC7A5;&#xBE44;&#xB77C; &#xD504;&#xB808;&#xC784;&#xACFC; &#xC8FC;&#xC18C;&#xB3C4; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC5B4;&#xC11C; &#xD6A8;&#xC728;&#xC801;&#xC778; &#xD2B8;&#xB798;&#xD53D; &#xAD00;&#xB9AC;&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<!--### 정리
+- 컴퓨터 네트워크의 계층 패턴은 건물을 쌓아 올리 듯이 층을 나누어져 있다.
+- 각 계층은 독립적인 기술을 선택할 수 있도록 서로의 의존성이 낮다.
+- 인접하나 계층과의 인터페이스 규약은 지켜야 한다.
+- 인접하지 않은 계층은 인터페이스도 정해져 있지 않으므로 무슨 일을 하는지 전혀 알 수 없다.-->
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="logic-gate-basics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Logic gate basics">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Network basics","level":"1.3.3","depth":2,"previous":{"title":"Logic gate basics","level":"1.3.2","depth":2,"path":"Contents/CS/logic-gate-basics.md","ref":"Contents/CS/logic-gate-basics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/CS/network-basics.md","mtime":"2019-09-13T17:18:59.821Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-13T17:22:06.453Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
