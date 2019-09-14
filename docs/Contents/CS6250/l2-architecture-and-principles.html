@@ -1,0 +1,675 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Architecture and Principles · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="l3-switching.html" />
+    
+    
+    <link rel="prev" href="README.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../JavaScript/">
+            
+                <a href="../JavaScript/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../JavaScript/es6-basics.html">
+            
+                <a href="../JavaScript/es6-basics.html">
+            
+                    
+                    ES6 Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../JavaScript/__proto__-vs-prototype.html">
+            
+                <a href="../JavaScript/__proto__-vs-prototype.html">
+            
+                    
+                    proto VS prototype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../JavaScript/const-and-immutable-array.html">
+            
+                <a href="../JavaScript/const-and-immutable-array.html">
+            
+                    
+                    Const statement and immutable array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../javascript/isNaN-and-isArray.html">
+            
+                <a href="../javascript/isNaN-and-isArray.html">
+            
+                    
+                    isNaN and isArray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../JavaScript/javascript-asynchronous.html">
+            
+                <a href="../JavaScript/javascript-asynchronous.html">
+            
+                    
+                    Asynchronous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../JavaScript/let-and-closure.html">
+            
+                <a href="../JavaScript/let-and-closure.html">
+            
+                    
+                    Let statement and closure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../JavaScript/array-methods.html">
+            
+                <a href="../JavaScript/array-methods.html">
+            
+                    
+                    Array Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../JavaScript/numbers-and-parseInt.html">
+            
+                <a href="../JavaScript/numbers-and-parseInt.html">
+            
+                    
+                    numbers() and parseInt()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../CS/">
+            
+                <a href="../CS/">
+            
+                    
+                    CS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../CS/logic-gate-endians.html">
+            
+                <a href="../CS/logic-gate-endians.html">
+            
+                    
+                    Logic gate endians
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../CS/logic-gate-basics.html">
+            
+                <a href="../CS/logic-gate-basics.html">
+            
+                    
+                    Logic gate basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../CS/network-basics.html">
+            
+                <a href="../CS/network-basics.html">
+            
+                    
+                    Network basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="README.md">
+            
+                <span>
+            
+                    
+                    CS6250
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="l2-architecture-and-principles.html">
+            
+                <a href="l2-architecture-and-principles.html">
+            
+                    
+                    Architecture and Principles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="l3-switching.html">
+            
+                <a href="l3-switching.html">
+            
+                    
+                    Switching
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Architecture and Principles</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="computer-networking---lesson-2-architecture-and-principles">Computer Networking - Lesson 2 Architecture and Principles</h1>
+<h2 id="1-lession-2-intro">1 Lession 2 Intro</h2>
+<ul>
+<li>Early internet architect set out with clear goals and allowed flexibility in ahcieving them.<h2 id="2-a-breif-history-of-the-internet">2 A Breif History of the Internet</h2>
+</li>
+<li>ARPANET (1966-67) UCLA, SRI, UCSB, Utah (1969)<ul>
+<li>goal : network academic computer</li>
+</ul>
+</li>
+<li>NPL net in UK became online around same time</li>
+<li><p>1971 -&gt; around 20 ARPANET Nodes.</p>
+<ul>
+<li>Speed of around 50 Kbps<h2 id="3-problems-and-growing-pains">3 Problems and Growing Pains</h2>
+</li>
+</ul>
+</li>
+<li><p>Running out of addresses -&gt; IPv4 has only 2^(32) addresses.</p>
+</li>
+<li>Congestion Control -&gt; insufficient dynamic range (wireless, high-speed intercontinental paths)</li>
+<li>Routing -&gt; no security, easy to misconfigure, poor convergence, non-determinism</li>
+<li>Secruity -&gt; bad key management, secure software deployemnt</li>
+<li>Denial of service -&gt; too easy to send traffic to destination</li>
+</ul>
+<h2 id="4-architectual-design-principles">4 Architectual Design Principles</h2>
+<ul>
+<li>Design Philosopy of the DARPA Internet Protocols, Dave Clark 1988</li>
+<li>Conceptual Lessons -&gt; principles designed for a certain type of network</li>
+<li>Technical Lessons -&gt; <ul>
+<li>1 packet switching</li>
+<li>2 fate sharing or soft state</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-goal">5 Goal</h2>
+<p>The fundamental design Goal of the Internet </p>
+<ul>
+<li><p>&quot;Multiplexed utilization of existing interconnected networks&quot;</p>
+<ul>
+<li>&quot;Multiplexed&quot; : sharing problem - Solution: statistical multiplexing / packet switching</li>
+<li>&quot;Interconnection&quot; : Solution :narrow waist</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-packet-switching">6 Packet Switching</h2>
+<ul>
+<li>Information for forwarding traffic contained in destination addess of packet.<ul>
+<li>shared resources (shared ndoes)</li>
+<li>could cause delay or loss of packet</li>
+</ul>
+</li>
+<li>In contrast to &quot;circuit switching&quot; <ul>
+<li>out of band signaling sets up dedicated path</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-quiz-packet-switching-vs-circuit-switching">7 Quiz: Packet Switching VS Circuit Switching</h2>
+<ul>
+<li>Variable Delay - Packet Switching</li>
+<li>Busy Signals - Circuit Switching</li>
+<li>Sharing of network resources - Packet Switching</li>
+<li>Dedicated resources between sender and receiver - Circuit Switching</li>
+</ul>
+<h2 id="8-narrow-waist">8 Narrow Waist</h2>
+<h3 id="interconnection--narrow-waist">Interconnection : Narrow Waist</h3>
+<ul>
+<li>Goal : Interconnect many existing networks. Hide underlying technology from applications.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Layer numbering</th>
+<th>Protocol</th>
+<th>Layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>HTTP, SMTP,...</td>
+<td>Application Layer</td>
+</tr>
+<tr>
+<td>Usually don&apos;t refer layers by number above this layer</td>
+<td>TCP, UDP</td>
+<td>Transport Layer</td>
+</tr>
+<tr>
+<td>3</td>
+<td>IP</td>
+<td>Network Layer, <strong>only protocol in this layer</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ethernet</td>
+<td>Link Layer</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Sonet</td>
+<td>Physical Layer</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Every Internet device must speak IP.</li>
+<li>Link Layer provides p2p connectivity to Network Layer</li>
+<li>Network Layer provides end to end connectivity to Transport Layer</li>
+<li>Transport Layer provides reliable transport and congestion control to application layer</li>
+<li>Difficult to change in IP</li>
+</ul>
+<h2 id="9-goal-survivability">9 Goal Survivability</h2>
+<ul>
+<li>survivality : network works even if soem devices fail.<ul>
+<li>replication</li>
+<li>fate sharing<ul>
+<li>easier to withstand complex failure</li>
+<li>easier engineering</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-goal-heterogeneity">10 Goal Heterogeneity</h2>
+<ul>
+<li>Heterogeneity<ul>
+<li>1 TCP/IP</li>
+<li>2 &quot;Best Effort&quot;</li>
+</ul>
+</li>
+</ul>
+<h2 id="11-goals-distributed-management">11 Goals Distributed Management</h2>
+<ul>
+<li>Distributed Management<ul>
+<li>Addressing(ARIN, RIPE, ...)</li>
+<li>Naming(DNS)</li>
+<li>Routing(BGP)</li>
+</ul>
+</li>
+<li>Good<ul>
+<li>organic growth</li>
+<li>stable management</li>
+</ul>
+</li>
+<li>Bad<ul>
+<li>no owner</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-whats-missing-in-clarks-paper">12 What&apos;s Missing (in Clark&apos;s paper)</h2>
+<ul>
+<li>no discussion of security</li>
+<li>no discussion of availablity</li>
+<li>no discussion of mobility</li>
+<li>no discussion of scaling</li>
+</ul>
+<h2 id="13-quiz-darpa-paper-quiz">13 Quiz: DARPA Paper Quiz</h2>
+<p>Clark&apos;s paper includes following</p>
+<ul>
+<li>No security</li>
+<li>YES Heterogeneity</li>
+<li>YES Interconnection</li>
+<li>YES Sharing</li>
+<li>NO Mobility</li>
+</ul>
+<h2 id="14-end-to-end-argument">14 End to End Argument</h2>
+<p>&quot;The function in question can completely and correctly be implemented only with the knowledge and help of the application standing <strong>at the end points of the communication system</strong>. Therefore, providing that questioned function as a feature of the communication system itself <strong>is not possible</strong>. (Sometimes an incomplete version of the function provided by the communication system may be useful as a performance enhancement.)&quot;</p>
+<h3 id="examples">examples</h3>
+<ol>
+<li>Error handling in file transfer</li>
+<li>End-to-end encryption</li>
+<li>TCP/IP Split error handling<blockquote>
+<p>&quot;Dumb network, intelligent endpoints&quot;</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="15-file-transfer-example-from-above">15 File Transfer (example from above)</h2>
+<ol>
+<li>read file from disk</li>
+<li>communication system sends file</li>
+<li>transmits pakcets</li>
+<li>give file to file transfer program</li>
+<li>write to disk</li>
+</ol>
+<h3 id="what-can-go-wrong">What can go wrong?</h3>
+<ol>
+<li>read/write</li>
+<li>breaking up / assembling</li>
+<li>communication system</li>
+</ol>
+<blockquote>
+<p>we can handle error each problems above but it still needs application level checking.</p>
+<p>End to end checking and resending could have better performance</p>
+</blockquote>
+<h2 id="16-end-to-end-argument-violation">16 End to End Argument Violation</h2>
+<ul>
+<li>Still an argument</li>
+<li>Violations:<ul>
+<li>NAT</li>
+<li>VPN tunnels</li>
+<li>TCP splitting</li>
+<li>Spam</li>
+<li>P2P systems</li>
+<li>Caches</li>
+</ul>
+</li>
+<li>Question?:<ul>
+<li>what&apos;s in/out?<ul>
+<li>Routing</li>
+<li>Multicast</li>
+<li>QoS</li>
+<li>NAT</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="17-18-violation-nat">17-18 Violation NAT</h2>
+<ul>
+<li>NAT(Network Address Translation) ususally that is used in home network blocks endpoints behind it from globally addressing or routing.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="README.md" class="navigation navigation-prev " aria-label="Previous page: CS6250">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="l3-switching.html" class="navigation navigation-next " aria-label="Next page: Switching">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Architecture and Principles","level":"1.4.1","depth":2,"next":{"title":"Switching","level":"1.4.2","depth":2,"path":"Contents/CS6250/l3-switching.md","ref":"Contents/CS6250/l3-switching.md","articles":[]},"previous":{"title":"CS6250","level":"1.4","depth":1,"path":"Contents/CS6250/README.md","ref":"Contents/CS6250/README.md","articles":[{"title":"Architecture and Principles","level":"1.4.1","depth":2,"path":"Contents/CS6250/l2-architecture-and-principles.md","ref":"Contents/CS6250/l2-architecture-and-principles.md","articles":[]},{"title":"Switching","level":"1.4.2","depth":2,"path":"Contents/CS6250/l3-switching.md","ref":"Contents/CS6250/l3-switching.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/CS6250/l2-architecture-and-principles.md","mtime":"2019-09-14T04:27:09.948Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-14T04:31:58.461Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

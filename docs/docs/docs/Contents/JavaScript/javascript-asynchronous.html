@@ -1,0 +1,420 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Asynchronous · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="let-and-closure.html" />
+    
+    
+    <link rel="prev" href="../javascript/isNaN-and-isArray.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Intro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="es6-basics.html">
+            
+                <a href="es6-basics.html">
+            
+                    
+                    ES6 Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="__proto__-vs-prototype.html">
+            
+                <a href="__proto__-vs-prototype.html">
+            
+                    
+                    proto VS prototype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="const-and-immutable-array.html">
+            
+                <a href="const-and-immutable-array.html">
+            
+                    
+                    Const statement and immutable array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../javascript/isNaN-and-isArray.html">
+            
+                <a href="../javascript/isNaN-and-isArray.html">
+            
+                    
+                    isNaN-and-isArray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="javascript-asynchronous.html">
+            
+                <a href="javascript-asynchronous.html">
+            
+                    
+                    Asynchronous
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="let-and-closure.html">
+            
+                <a href="let-and-closure.html">
+            
+                    
+                    Let statement and closure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="array-methods.html">
+            
+                <a href="array-methods.html">
+            
+                    
+                    Array Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="numbers-and-parseInt.html">
+            
+                <a href="numbers-and-parseInt.html">
+            
+                    
+                    numbers() and parseInt()
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Asynchronous</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="javascript-&#xBE44;&#xB3D9;&#xAE30;&#xC5D0;-&#xAD00;&#xD558;&#xC5EC;">JavaScript &#xBE44;&#xB3D9;&#xAE30;&#xC5D0; &#xAD00;&#xD558;&#xC5EC;</h1>
+<h2 id="&#xC774;&#xBCA4;&#xD2B8;-&#xB8E8;&#xD504;&#xC640;-&#xCF5C;&#xC2A4;&#xD0DD;-&#xADF8;&#xB9AC;&#xACE0;-&#xD0DC;&#xC2A4;&#xD06C;-&#xD050;">&#xC774;&#xBCA4;&#xD2B8; &#xB8E8;&#xD504;&#xC640; &#xCF5C;&#xC2A4;&#xD0DD; &#xADF8;&#xB9AC;&#xACE0; &#xD0DC;&#xC2A4;&#xD06C; &#xD050;</h2>
+<ul>
+<li>setTimeout &#xADF8;&#xB9AC;&#xACE0; Promise&#xC640; &#xAC19;&#xC740; &#xBE44;&#xB3D9;&#xAE30; &#xB85C;&#xC9C1;&#xB4E4;&#xC740; &#xB3D9;&#xAE30;&#xB85C; &#xC791;&#xB3D9;&#xD558;&#xB294; &#xB2E4;&#xB978; &#xCF54;&#xB4DC;&#xB4E4;&#xACFC; &#xB2E4;&#xB974;&#xAC8C; &#xC791;&#xB3D9;&#xD558;&#xC5EC; &#xB9CE;&#xC740; &#xAC1C;&#xBC1C;&#xC790;&#xB4E4;&#xC744; &#xB2F9;&#xD669;&#xCF00;&#xD558;&#xACE0;&#xB294; &#xD55C;&#xB2E4;.</li>
+<li>&#xD568;&#xC218; a()&#xC640; b()&#xAC00; &#xC788;&#xB2E4;&#xACE0; &#xAC00;&#xC815;&#xD55C;&#xB2E4;.</li>
+<li>&#xD568;&#xC218; b&#xB294; &#xB0B4;&#xBD80;&#xC5D0;&#xC11C; &#xD568;&#xC218; a&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xACE0; <code>setTimeout(()=&gt;{console.log(&quot;hi&quot;)}, 0)</code>&#xB97C; &#xC2E4;&#xD589;&#xD55C; &#xB4A4; <code>console.log(&quot;bye&quot;)</code>&#xB97C; &#xC2E4;&#xD589;&#xD55C;&#xB2E4;.</li>
+<li>&#xC544;&#xB798;&#xC640; &#xAC19;&#xC744;&#xAC83;&#xC774;&#xB2E4;.
+```javascript
+function a(){
+  console.log(&quot;I am a&quot;);
+}</li>
+</ul>
+<p>function b(){
+    a();
+    setTimeout(()=&gt;{
+        console.log(&quot;hi&quot;);
+    }, 0);
+    console.log(&quot;bye&quot;);
+}</p>
+<p>b();
+```</p>
+<ul>
+<li>&#xC704;&#xC758; &#xCF54;&#xB4DC;&#xB294; &#xC5B4;&#xB5A4; &#xC21C;&#xC11C;&#xB85C; &#xC791;&#xB3D9;&#xD560;&#xAE4C;?</li>
+<li>&#xC6B0;&#xC120;&#xC801;&#xC73C;&#xB85C; &#xD568;&#xC218; b&#xAC00; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xC62C;&#xB77C;&#xAC04; &#xD6C4; a&#xB97C; &#xD638;&#xCD9C; &#xD558;&#xC5EC; a&#xAC00; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xC62C;&#xB77C;&#xAC08; &#xAC83;&#xC774;&#xB2E4;.</li>
+<li>&#xD568;&#xC218; a&#xAC00; <code>console.log(&quot;I am a&quot;)</code>&#xB97C; &#xC2E4;&#xD589;&#xD55C; &#xD6C4; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC0AC;&#xB77C;&#xC9C4; &#xD6C4; setTimeout&#xC740; &#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xD639;&#xC740; NodeJS&#xC5D0;&#xAC8C; 0&#xCD08; &#xB4A4;&#xC5D0; &#xCF5C;&#xBC31;&#xD568;&#xC218;&#xB97C; &#xC2E4;&#xD589;&#xD558;&#xB294; &#xD0C0;&#xC774;&#xBA38; &#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xC694;&#xCCAD;&#xD55C; &#xD6C4; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xBC14;&#xB85C; &#xC81C;&#xAC70; &#xB41C;&#xB2E4;.</li>
+<li>0&#xCD08; &#xB4A4;&#xC5D0; &#xCF5C;&#xBC31;&#xD568;&#xC218;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xC5B4;&#xC57C; &#xD558;&#xC9C0;&#xB9CC; &#xC0AC;&#xC2E4; &#xCF5C;&#xBC31;&#xD568;&#xC218;&#xB294; &#xCF5C;&#xC2A4;&#xD0DD;&#xC73C;&#xB85C; &#xAC00;&#xB294; &#xAC83;&#xC774;&#xC544;&#xB2C8;&#xB77C; &#xD0DC;&#xC2A4;&#xD06C;&#xD050;&#xB77C;&#xB294; &#xACF3;&#xC73C;&#xB85C; &#xAC00;&#xAC8C;&#xB418;&#xC5B4; &#xCF5C;&#xC2A4;&#xD0DD;&#xC774; &#xBE44;&#xC6CC;&#xC9C8;&#xB54C;&#xAE4C;&#xC9C0; &#xAE30;&#xB2E4;&#xB824;&#xC57C; &#xD55C;&#xB2E4;.</li>
+<li><code>console.log(&quot;bye&quot;)</code>&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xACE0; &#xD568;&#xC218; b&#xAE4C;&#xC9C0; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC0AC;&#xB77C;&#xC9C0;&#xBA74; &#xADF8;&#xB54C; &#xACC4;&#xC18D;&#xD574;&#xC11C; &#xCF5C;&#xC2A4;&#xD0DD;&#xACFC; &#xD0DC;&#xC2A4;&#xD06C;&#xD050;&#xB97C; &#xC810;&#xAC80;&#xD558;&#xB294; &#xC774;&#xBCA4;&#xD2B8; &#xB8E8;&#xD504;&#xAC00; &#xD0DC;&#xC2A4;&#xD06C;&#xD050;&#xC5D0;&#xC11C; <code>console.log(&quot;hi&quot;)</code>&#xB97C; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xCD94;&#xAC00;&#xD558;&#xACE0; &#xC2E4;&#xD589;&#xD55C;&#xB2E4;.</li>
+<li>&#xC815;&#xB9AC;&#xD558;&#xBA74; &#xC774;&#xB807;&#xB2E4;.<ul>
+<li><strong>&#xCF5C;&#xC2A4;&#xD0DD;</strong>(<strong>Call stack</strong>)&#xC740; &#xD568;&#xC218;&#xAC00; &#xD638;&#xCD9C;&#xB420;&#xB54C;&#xB9C8;&#xB2E4; &#xB0B4;&#xBD80;&#xC5D0;&#xC11C; &#xB2E4;&#xB978; &#xD568;&#xC218;&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA74; &#xC0C8;&#xB85C; &#xD638;&#xCD9C;&#xB41C; &#xD568;&#xC218;&#xB4E4;&#xC774; &#xC313;&#xC774;&#xAC8C; &#xB418;&#xACE0; &#xC0C8;&#xB85C; &#xD638;&#xCD9C;&#xD55C; &#xD568;&#xC218;&#xB97C; &#xBAA8;&#xB450; &#xC2E4;&#xD589;&#xD558;&#xC5EC; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xD558;&#xBA74; &#xD638;&#xCD9C;&#xD588;&#xB358; &#xCF54;&#xB4DC;&#xB85C; &#xB3CC;&#xC544;&#xAC00; &#xD558;&#xB358; &#xC2E4;&#xD589;&#xC744; &#xB9C8;&#xC800;&#xD558;&#xB294; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xC911;&#xC778; &#xD568;&#xC218;&#xB4E4;&#xC774; &#xD638;&#xCD9C;&#xB41C; &#xC5ED;&#xC21C;&#xC73C;&#xB85C; &#xC77C;&#xC744; &#xB9C8;&#xCE58;&#xB294; &#xC21C;&#xC11C;&#xB97C; &#xB9D0;&#xD55C;&#xB2E4;.<ul>
+<li>&#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xB098;&#xC911;&#xC5D0; &#xD638;&#xCD9C;&#xB41C; &#xD568;&#xC218;&#xAC00; &#xBA3C;&#xC800; &#xC2E4;&#xD589;&#xB418;&#xACE0; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC81C;&#xAC70;&#xB41C;&#xB2E4;.</li>
+</ul>
+</li>
+<li><strong>&#xD0DC;&#xC2A4;&#xD06C;&#xD050;</strong>(<strong>Task Queue</strong>)&#xB294; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C; &#xC774;&#xBCA4;&#xD2B8;&#xB098; &#xBE44;&#xB3D9;&#xAE30; &#xB85C;&#xC9C1;&#xCC98;&#xB7FC; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0;&#xC11C; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xCC98;&#xB9AC;&#xB418;&#xB294; &#xAC83;&#xB4E4;&#xC774; &#xC544;&#xB2CC; &#xC774;&#xBCA4;&#xD2B8; &#xB8E8;&#xD504;&#xAC00; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xB4F1;&#xB85D;&#xC2DC;&#xCF1C; &#xCC98;&#xB9AC;&#xB418;&#xC57C; &#xD558;&#xB294; &#xC77C;&#xB4E4;&#xC774; &#xAE30;&#xB2E4;&#xB9AC;&#xB294; &#xACF3;&#xC774;&#xB2E4;.<ul>
+<li>&#xBE44;&#xB3D9;&#xAE30; &#xB85C;&#xC9C1;&#xB4E4;&#xC740; &#xCF5C;&#xC2A4;&#xD0DD;&#xC774; &#xBAA8;&#xB450;&#xBE44;&#xC5B4;&#xC9C8; &#xB54C;&#xAE4C;&#xC9C0; &#xC774;&#xACF3;&#xC5D0;&#xC11C; &#xAE30;&#xB2E4;&#xB9B0;&#xB2E4;.</li>
+</ul>
+</li>
+<li><strong>&#xC774;&#xBCA4;&#xD2B8; &#xB8E8;&#xD504;</strong>(<strong>Event Loop</strong>)&#xB294; &#xACC4;&#xC18D;&#xD574;&#xC11C; &#xCF5C;&#xC2A4;&#xD0DD;&#xACFC; &#xD0DC;&#xC2A4;&#xD06C;&#xD050;&#xB97C; &#xC810;&#xAC80;&#xD558;&#xC5EC; &#xCF5C;&#xC2A4;&#xD0DD;&#xC5D0; &#xB4F1;&#xB85D;&#xC2DC;&#xD0AC; &#xD0DC;&#xC2A4;&#xD06C;&#xB4E4;&#xC744; &#xC810;&#xAC80;&#xD558;&#xACE0; &#xB4F1;&#xB85D;&#xD558;&#xC5EC; &#xC2E4;&#xD589;&#xD558;&#xB294; &#xC5ED;&#xD560;&#xC744; &#xC218;&#xD589;&#xD55C;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<h2 id="javascript&#xB294;-&#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C;&#xB294;-&#xB3D9;&#xAE30;&#xC801;&#xC774;&#xB2E4;">JavaScript&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C;&#xB294; &#xB3D9;&#xAE30;&#xC801;&#xC774;&#xB2E4;.</h2>
+<ul>
+<li><strong>&#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C;</strong> &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; &#xB3D9;&#xAE30;&#xC801;&#xC774;&#xACE0; blocking&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBA70;, &#xC2F1;&#xAE00;-&#xC4F0;&#xB808;&#xB4DC;&#xC758; &#xC5B8;&#xC5B4;&#xC774;&#xB2E4;.</li>
+<li>&#xD558;&#xC9C0;&#xB9CC; &#xC704;&#xC758; &#xD2B9;&#xC9D5;&#xC740; &#xC808;&#xB300;&#xB85C; &#xB2E4;&#xAC00; &#xC544;&#xB2C8;&#xB77C;&#xB294; &#xC810;&#xC744; &#xBA85;&#xC2EC;&#xD574;&#xC57C;&#xD55C;&#xB2E4;.</li>
+<li>&#xB9CC;&#xC57D; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xB9E4;&#xC6B0; &#xC624;&#xB798;&#xAC78;&#xB9AC;&#xB294; Http&#xC694;&#xCCAD;&#xC744; &#xD588;&#xB2E4;&#xBA74; &#xADF8;&#xAC83;&#xC744; &#xACC4;&#xC18D;&#xD574;&#xC11C; &#xAE30;&#xB2E4;&#xB9AC;&#xAE30;&#xB9CC; &#xD558;&#xB294; &#xAC83;&#xC740; &#xACBD;&#xD5D8;&#xC801;&#xC73C;&#xB85C; &#xC88B;&#xC9C0; &#xC54A;&#xC740; &#xACB0;&#xACFC;&#xB97C; &#xAC00;&#xC9C0;&#xAC8C; &#xB420; &#xAC83;&#xC774;&#xB2E4;.<ul>
+<li>&#xADF8;&#xB798;&#xC11C; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xCEE4;&#xBBA4;&#xB2C8;&#xD2F0;&#xC5D0;&#xC11C;&#xB294; &#xC774;&#xB7F0; &#xBD80;&#xBD84;&#xC5D0; &#xB300;&#xD55C; &#xD6A8;&#xACFC;&#xC801;&#xC778; &#xB300;&#xC548;&#xCC45;&#xC744; &#xB9CC;&#xB4E4;&#xC5B4; &#xB0C8;&#xB2E4;.</li>
+</ul>
+</li>
+<li>&#xC0AC;&#xB78C;&#xB4E4;&#xC774; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xBE44;&#xB3D9;&#xAE30;&#xC801;&#xC774;&#xB77C;&#xACE0; &#xB9D0;&#xD558;&#xB294; &#xAC83;&#xC740; &#xC0AC;&#xC2E4;&#xC740; <strong>&quot;&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xBE44;&#xB3D9;&#xAE30;&#xC801;&#xC73C;&#xB85C; &#xD589;&#xB3D9;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xC870;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;&quot;</strong> &#xB294; &#xAC83;&#xC774;&#xB2E4;.</li>
+</ul>
+<h2 id="&#xBE44;&#xB3D9;&#xAE30;-&#xCF5C;&#xBC31;">&#xBE44;&#xB3D9;&#xAE30; &#xCF5C;&#xBC31;</h2>
+<ul>
+<li>&#xC704;&#xC758; &#xC608;&#xC5D0;&#xC11C; Http &#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0B8; &#xD6C4; &#xC751;&#xB2F5;&#xC744; &#xAE30;&#xB2E4;&#xB9AC;&#xB294; &#xB3D9;&#xC548; &#xB098;&#xBA38;&#xC9C0; &#xCF54;&#xB4DC;&#xB4E4;&#xC774; &#xACC4;&#xC18D;&#xD574;&#xC11C; &#xC2E4;&#xD589; &#xB418;&#xB3C4;&#xB85D; &#xD574;&#xC8FC;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</li>
+<li>Http &#xC751;&#xB2F5;&#xC774; &#xB3C4;&#xCC29;&#xD588;&#xC744;&#xB54C; &#xADF8; &#xC751;&#xB2F5;&#xC740; &#xD0DC;&#xC2A4;&#xD06C; &#xD050;&#xB85C; &#xB4E4;&#xC5B4;&#xAC00; &#xC774;&#xBCA4;&#xD2B8; &#xB8E8;&#xD504;&#xB97C; &#xD1B5;&#xD574; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xB41C;&#xB2E4;.</li>
+<li>&#xC774;&#xB294; &#xB9E4;&#xC6B0; &#xC88B;&#xC740; &#xD574;&#xACB0;&#xCC45;&#xC774;&#xC9C0;&#xB9CC; &#xC5B8;&#xC81C; &#xC774; &#xD0DC;&#xC2A4;&#xD06C; &#xD050;&#xB85C; &#xB4E4;&#xC5B4;&#xAC04; Http&#xC751;&#xB2F5;&#xC774; &#xCC98;&#xB9AC;&#xB420;&#xC9C0; &#xC54C; &#xC218; &#xC5C6;&#xB2E4;&#xB294; &#xB2E8;&#xC810;&#xC774; &#xC788;&#xB2E4;.<ul>
+<li>&#xADF8;&#xB798;&#xC11C; &#xAC1C;&#xBC1C;&#xC790;&#xB4E4;&#xC740; &#xADF8; &#xC751;&#xB2F5;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xB85C;&#xC9C1;&#xC744; &#xCF54;&#xB4DC; &#xB0B4;&#xBD80;&#xC5D0; nest&#xD558;&#xB294; &#xC2DD;&#xC73C;&#xB85C; &#xD574;&#xACB0;&#xD558;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;.</li>
+<li>&#xC774;&#xB294; &#xCF54;&#xB4DC;&#xAC00; &#xB9E4;&#xC6B0; &#xC9C0;&#xC800;&#xBD84;&#xD574;&#xC9C0;&#xBA70; &#xADF8; &#xC720;&#xBA85;&#xD55C; &quot;&#xCF5C;&#xBC31;&#xC9C0;&#xC625;&quot;&#xC774; &#xBC14;&#xB85C; &#xC774; &#xBD80;&#xBD84;&#xC744; &#xC77C;&#xCEEB;&#xB294; &#xAC83;&#xC774;&#xB2E4;.</li>
+</ul>
+</li>
+<li>&#xADF8;&#xB9AC;&#xD558;&#xC5EC; Promise&#xC758; &#xAC1C;&#xB150;&#xC774; &#xB098;&#xD0C0;&#xB09C;&#xB2E4;.</li>
+</ul>
+<h2 id="promise">Promise</h2>
+<ul>
+<li>Promise&#xB294; &#xAD00;&#xB828;&#xB85C;&#xC9C1;&#xC744; &#xD55C;&#xB369;&#xC5B4;&#xB9AC;&#xC758; &#xCF54;&#xB4DC;&#xBE14;&#xB85D;&#xC5D0; &#xAC00;&#xB450;&#xB294; &#xAC83;&#xC774; &#xC544;&#xB2C8;&#xB77C; &#xB530;&#xB85C; &#xBD84;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD574;&#xC900;&#xB2E4;.</li>
+<li>&#xBE44;&#xB3D9;&#xAE30; &#xCF5C;&#xBC31;&#xC744; &#xC804;&#xC1A1;&#xD558;&#xACE0; then&#xC73C;&#xB85C; &#xBAA8;&#xB4E0; &#xAD00;&#xB828;&#xB85C;&#xC9C1;&#xC744; &#xC7A1;&#xC544;&#xB193;&#xB294;&#xB2E4;.</li>
+<li>&#xADF8;&#xB9AC;&#xACE0; &#xBE44;&#xB3D9;&#xAE30; &#xCF5C;&#xBC31;&#xC774; &#xB3CC;&#xC544;&#xC624;&#xBA74; &#xAD00;&#xB828;&#xB85C;&#xC9C1;&#xC744; &#xBD88;&#xB7EC;&#xB2E4;&#xAC00; &#xC2E4;&#xD589;&#xD55C;&#xB2E4;.</li>
+<li>&#xC774;&#xB294; &#xBE44;&#xB3D9;&#xAE30;&#xC758; &#xC7A5;&#xC810;&#xC744; &#xBAA8;&#xB450; &#xC774;&#xC6A9;&#xD558;&#xBA74;&#xC11C;&#xB3C4; &#xCF54;&#xB4DC;&#xAC00; &#xB9E4;&#xC6B0; &#xBAA8;&#xB4C8;&#xD654;&#xB418;&#xACE0; &#xC77D;&#xAE30; &#xC27D;&#xAC8C; &#xD574;&#xC900;&#xB2E4;.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../javascript/isNaN-and-isArray.html" class="navigation navigation-prev " aria-label="Previous page: isNaN-and-isArray">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="let-and-closure.html" class="navigation navigation-next " aria-label="Next page: Let statement and closure">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Asynchronous","level":"1.2.5","depth":2,"next":{"title":"Let statement and closure","level":"1.2.6","depth":2,"path":"Contents/JavaScript/let-and-closure.md","ref":"Contents/JavaScript/let-and-closure.md","articles":[]},"previous":{"title":"isNaN-and-isArray","level":"1.2.4","depth":2,"path":"Contents/javascript/isNaN-and-isArray.md","ref":"Contents/javascript/isNaN-and-isArray.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/JavaScript/javascript-asynchronous.md","mtime":"2019-09-13T14:36:58.336Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-13T15:08:42.855Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

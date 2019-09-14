@@ -14,3 +14,6 @@
     * [Logic gate endians](Contents/CS/logic-gate-endians.md)
     * [Logic gate basics](Contents/CS/logic-gate-basics.md)
     * [Network basics](Contents/CS/network-basics.md)
+* [CS6250](Contents/CS6250/README.md)
+    * [Architecture and Principles](Contents/CS6250/l2-architecture-and-principles.md)
+    * [Switching](Contents/CS6250/l3-switching.md)
