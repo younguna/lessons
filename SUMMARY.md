@@ -17,3 +17,8 @@
 * [CS6250](Contents/CS6250/README.md)
     * [Architecture and Principles](Contents/CS6250/l2-architecture-and-principles.md)
     * [Switching](Contents/CS6250/l3-switching.md)
+* [Git](Contents/Git/README.md)
+    * [Fork에서 PR](Contents/Git/git_fork_to_pr.md)
+    * [Git Basics](Contents/Git/git_basics.md)
+* [Other](Contents/Other/README.md)
+    * ["그런 REST API로 괜찮은가"를 보고](Contents/Other/is_it_rest.md)
