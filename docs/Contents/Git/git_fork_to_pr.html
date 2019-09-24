@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>isNaN and isArray · GitBook</title>
+        <title>Fork에서 PR · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../JavaScript/javascript-asynchronous.html" />
+    <link rel="next" href="git_basics.html" />
     
     
-    <link rel="prev" href="../JavaScript/const-and-immutable-array.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -155,9 +155,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="isNaN-and-isArray.html">
+        <li class="chapter " data-level="1.2.4" data-path="../javascript/isNaN-and-isArray.html">
             
-                <a href="isNaN-and-isArray.html">
+                <a href="../javascript/isNaN-and-isArray.html">
             
                     
                     isNaN and isArray
@@ -328,9 +328,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../Git/">
+        <li class="chapter " data-level="1.5" data-path="./">
             
-                <a href="../Git/">
+                <a href="./">
             
                     
                     Git
@@ -342,9 +342,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../Git/git_fork_to_pr.html">
+        <li class="chapter active" data-level="1.5.1" data-path="git_fork_to_pr.html">
             
-                <a href="../Git/git_fork_to_pr.html">
+                <a href="git_fork_to_pr.html">
             
                     
                     Fork에서 PR
@@ -355,9 +355,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../Git/git_basics.html">
+        <li class="chapter " data-level="1.5.2" data-path="git_basics.html">
             
-                <a href="../Git/git_basics.html">
+                <a href="git_basics.html">
             
                     
                     Git Basics
@@ -435,7 +435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >isNaN and isArray</a>
+        <a href="../.." >Fork에서 PR</a>
     </h1>
 </div>
 
@@ -450,66 +450,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="isnan-isarray-&#xB3D9;&#xC791;">isNaN() isArray() &#xB3D9;&#xC791;</h1>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> testInputs = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>,[<span class="hljs-number">1</span>], [<span class="hljs-string">&quot;a&quot;</span>], [], [<span class="hljs-number">1</span>,<span class="hljs-string">&quot;a&quot;</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>], <span class="hljs-literal">undefined</span>, <span class="hljs-literal">null</span>]
-
-testInputs.forEach((el)=&gt;{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;original: &quot;</span>, el);
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;!isNaN:   &quot;</span>, !<span class="hljs-built_in">isNaN</span>(el));
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;isArray:  &quot;</span>, <span class="hljs-built_in">isNaN</span>(el));
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;========================&quot;</span>)
-})
-</code></pre>
-<h3 id="&#xACB0;&#xACFC;">&#xACB0;&#xACFC;</h3>
-<pre><code class="lang-js">original:  <span class="hljs-number">0</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  <span class="hljs-number">1</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  <span class="hljs-number">2</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  <span class="hljs-number">1</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  <span class="hljs-number">2</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  [ <span class="hljs-number">1</span> ]
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  [ <span class="hljs-string">&apos;a&apos;</span> ]
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">false</span>
-isArray:   <span class="hljs-literal">true</span>
-========================
-original:  []
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  [ <span class="hljs-number">1</span>, <span class="hljs-string">&apos;a&apos;</span> ]
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">false</span>
-isArray:   <span class="hljs-literal">true</span>
-========================
-original:  [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ]
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">false</span>
-isArray:   <span class="hljs-literal">true</span>
-========================
-original:  <span class="hljs-literal">undefined</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">false</span>
-isArray:   <span class="hljs-literal">true</span>
-========================
-original:  <span class="hljs-literal">null</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-</code></pre>
+                                <h1 id="git-fork-&#xBD80;&#xD130;-&#xC774;&#xB8E8;&#xC5B4;&#xC9C0;&#xB294;-&#xC624;&#xD508;&#xC18C;&#xC2A4;&#xD504;&#xB85C;&#xC81D;&#xD2B8;-git&#xC5D0;-&#xAD00;&#xD558;&#xC5EC;">git fork &#xBD80;&#xD130; &#xC774;&#xB8E8;&#xC5B4;&#xC9C0;&#xB294; &#xC624;&#xD508;&#xC18C;&#xC2A4;/&#xD504;&#xB85C;&#xC81D;&#xD2B8; git&#xC5D0; &#xAD00;&#xD558;&#xC5EC;</h1>
+<p><img src="https://i.imgur.com/cU1Jbut.png" width="60%" style="margin:0 auto; display:block"></p>
+<h2 id="repository-&#xC124;&#xBA85;">Repository &#xC124;&#xBA85;</h2>
+<ul>
+<li><p>original repository : &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xD639;&#xC740; &#xC624;&#xD508;&#xC18C;&#xC2A4;&#xC758; &#xC6D0; &#xC6D0;&#xACA9; &#xB9AC;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;, &#xC624;&#xD508;&#xC18C;&#xC2A4;&#xC758; &#xBCF8; &#xC18C;&#xC2A4;&#xCF54;&#xB4DC;&#xB4E4;&#xC774; &#xBE0C;&#xB79C;&#xCE58;&#xC640; &#xD568;&#xAED8; &#xC720;&#xC9C0;&#xB418;&#xACE0; &#xC788;&#xC73C;&#xBA70; &#xD604;&#xC7AC; &#xAC1C;&#xC778;&#xC740; &#xC774; &#xB9AC;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xC5D0; &#xAD8C;&#xD55C;&#xC774; &#xC804;&#xD600; &#xC5C6;&#xB2E4;.</p>
+</li>
+<li><p>my remote repository : &#xB098;&#xC758; &#xC6D0;&#xACA9; &#xB9AC;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xB85C;&#xC368; original repository&#xC5D0;&#xC11C; fork&#xD574; &#xC628; &#xAC83;&#xC774;&#xB2E4;. fork&#xB294; github&#xAC19;&#xC740; &#xC6D0;&#xACA9; git &#xC11C;&#xBE44;&#xC2A4; &#xC0C1;&#xC5D0;&#xC11C; &#xC218;&#xD589;&#xB418;&#xB294; git clone &#xC774;&#xB2E4;. fork&#xD574;&#xC628; &#xB098;&#xC758; &#xC6D0;&#xACA9; &#xB9AC;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xC5D0; &#xB0B4;&#xAC00; &#xC791;&#xC5C5;&#xD558;&#xB294; &#xCF54;&#xB4DC;&#xB4E4;&#xC744; push&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xB9CC;&#xC57D; &#xC774; &#xC6D0;&#xACA9; &#xB9AC;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xC5D0; &#xAC19;&#xC774; &#xC791;&#xC5C5;&#xD558;&#xB294; &#xD300;&#xC6D0;&#xC774; &#xC788;&#xB2E4;&#xBA74; &#xADF8;&#xAC00; push&#xD55C; &#xCF54;&#xB4DC;&#xB97C; pull&#xD560; &#xC218; &#xB3C4; &#xC788;&#xB2E4;.</p>
+</li>
+<li><p>local repository : &#xADF8;&#xB9BC;&#xC5D0;&#xC11C; &#xAC00;&#xC7A5; &#xBC11;&#xC5D0; &#xC874;&#xC7AC;&#xD558;&#xB294; &#xB9AC;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xC774;&#xBA70; &#xB0B4;&#xAC00; &#xC2E4;&#xC81C;&#xB85C; &#xC791;&#xC5C5;&#xD558;&#xB294; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;. master &#xBE0C;&#xB79C;&#xCE58;&#xC5D0;&#xC11C; &#xBE0C;&#xB79C;&#xCE58;&#xB97C; &#xD30C;&#xC0DD;&#xD558;&#xC5EC; &#xC791;&#xC5C5;&#xD558;&#xBA70; &#xADF8;&#xAC83;&#xC744; push&#xD558;&#xBA74; my remote repository&#xC5D0;&#xB3C4; &#xADF8; &#xBE0C;&#xB79C;&#xCE58;&#xAC00; &#xC0DD;&#xC131;&#xB41C;&#xB2E4;. &#xC791;&#xC5C5;&#xD55C; &#xC774;&#xB825;&#xC744; &#xB0A8;&#xAE34;&#xB2E4;.</p>
+</li>
+</ul>
+<h2 id="flow">Flow</h2>
+<p>[1] : original repository&#xC5D0;&#xC11C; &#xB0B4; &#xC6D0;&#xACA9; remote repository(&#xB098;&#xC758; github &#xACC4;&#xC815; &#xB4F1;)&#xC73C;&#xB85C; git fork &#xD574;&#xC628;&#xB2E4;. public&#xB418;&#xC5B4;&#xC788;&#xB294; &#xC624;&#xD508;&#xC18C;&#xC2A4;&#xB294; git fork&#xD558;&#xB294;&#xB370; &#xC804;&#xD600; &#xC601;&#xD5A5;&#xC774; &#xC5C6;&#xB2E4;. my remote repository&#xC5D0; &#xB098;&#xC758; &#xC6D0;&#xACA9; &#xB9AC;&#xD3EC;&#xC9C0;&#xD1A0;&#xB9AC;&#xAC00; &#xC0DD;&#xC131;&#xB41C;&#xB2E4;.
+[2] :  my remote repository&#xC5D0; &#xC0DD;&#xC131;&#xB41C; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC5C5;&#xD558;&#xAE30; &#xC704;&#xD558;&#xC5EC; local repsoitory&#xB85C; git clone &#xD574;&#xC628;&#xB2E4;.
+[3] :  &#xADF8;&#xB9BC;&#xC5D0;&#xC11C;&#xB294; working branch&#xB77C;&#xB294; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xBE0C;&#xB79C;&#xCE58;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xC791;&#xC5C5;&#xD55C;&#xB2E4;. &#xBCF8;&#xC778;&#xC774; &#xC6D0;&#xD558;&#xB294; &#xBE0C;&#xB79C;&#xCE58;&#xBA85;&#xC73C;&#xB85C; &#xBE0C;&#xB79C;&#xCE58;&#xB97C; &#xD30C;&#xC0DD;&#xD558;&#xC5EC; &#xC791;&#xC5C5;&#xD55C;&#xB2E4;.
+[4] : &#xC5EC;&#xB7EC; &#xC791;&#xC5C5;&#xC744; &#xC218;&#xD589;&#xD55C; &#xD6C4; &#xC6D0;&#xACA9; &#xC800;&#xC7A5;&#xC18C;&#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xAE30; &#xC704;&#xD574; push&#xB97C; &#xC218;&#xD589;&#xD55C;&#xB2E4;.
+[5] :  original repository&#xC5D0; &#xAC1C;&#xC778;&#xC740; &#xAD8C;&#xD55C;&#xC774; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; &#xBCF8;&#xC778;&#xC774; &#xC791;&#xC5C5;&#xC744; &#xC218;&#xD589;&#xD558;&#xACE0; my remote repository&#xC5D0; &#xC800;&#xC7A5;&#xD55C; &#xB098;&#xC758; &#xCF54;&#xB4DC;&#xB97C; github&#xC758; &#xACBD;&#xC6B0; Pull Request&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xBB34;&#xC5C7;&#xC744; &#xC791;&#xC5C5;&#xD588;&#xB294;&#xC9C0; &#xB4F1;&#xB4F1;&#xC744; &#xC791;&#xC131;&#xD558;&#xACE0; &#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0B8;&#xB2E4;. original repository&#xC758; &#xC8FC;&#xC778;&#xC774;&#xB098; &#xB2E8;&#xCCB4;&#xAC00; Pull request&#xB97C; &#xC810;&#xAC80;&#xD558;&#xACE0; &#xD574;&#xB2F9; &#xCF54;&#xB4DC;&#xB97C; &#xC790;&#xC2E0;&#xB4E4;&#xC758; original repository&#xC5D0; merge &#xD560;&#xC9C0; &#xB9D0;&#xC9C0;&#xB97C; &#xACB0;&#xC815;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>Pull request&#xAC00; &#xAC70;&#xBD80;&#xB418;&#xC5C8;&#xC744; &#xC2DC;, &#xADF8;&#xC5D0; &#xB300;&#xD55C; &#xC774;&#xC720;&#xB4F1;&#xC744; &#xC54C;&#xB824;&#xC8FC;&#xB294; &#xCE5C;&#xC808;&#xD55C; owner&#xAC00; &#xC788;&#xB294; &#xBC18;&#xBA74; &#xD655;&#xC778;&#xD558;&#xC9C0;&#xB3C4; &#xC54A;&#xB294; owner&#xB3C4; &#xC788;&#xC73C;&#xBA70; &#xC544;&#xBB34; &#xC774;&#xC720; &#xC5C6;&#xC774; &#xAC70;&#xBD80;&#xD558;&#xB294; owner&#xB3C4; &#xC788;&#xB2E4;.</li>
+</ul>
 
                                 
                                 </section>
@@ -537,12 +497,12 @@ isArray:   <span class="hljs-literal">false</span>
 
             
                 
-                <a href="../JavaScript/const-and-immutable-array.html" class="navigation navigation-prev " aria-label="Previous page: Const statement and immutable array">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Git">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../JavaScript/javascript-asynchronous.html" class="navigation navigation-next " aria-label="Next page: Asynchronous">
+                <a href="git_basics.html" class="navigation navigation-next " aria-label="Next page: Git Basics">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -553,7 +513,7 @@ isArray:   <span class="hljs-literal">false</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"isNaN and isArray","level":"1.2.4","depth":2,"next":{"title":"Asynchronous","level":"1.2.5","depth":2,"path":"Contents/JavaScript/javascript-asynchronous.md","ref":"Contents/JavaScript/javascript-asynchronous.md","articles":[]},"previous":{"title":"Const statement and immutable array","level":"1.2.3","depth":2,"path":"Contents/JavaScript/const-and-immutable-array.md","ref":"Contents/JavaScript/const-and-immutable-array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/javascript/isNaN-and-isArray.md","mtime":"2019-09-14T04:36:23.618Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T00:06:36.698Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Fork에서 PR","level":"1.5.1","depth":2,"next":{"title":"Git Basics","level":"1.5.2","depth":2,"path":"Contents/Git/git_basics.md","ref":"Contents/Git/git_basics.md","articles":[]},"previous":{"title":"Git","level":"1.5","depth":1,"path":"Contents/Git/README.md","ref":"Contents/Git/README.md","articles":[{"title":"Fork에서 PR","level":"1.5.1","depth":2,"path":"Contents/Git/git_fork_to_pr.md","ref":"Contents/Git/git_fork_to_pr.md","articles":[]},{"title":"Git Basics","level":"1.5.2","depth":2,"path":"Contents/Git/git_basics.md","ref":"Contents/Git/git_basics.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/Git/git_fork_to_pr.md","mtime":"2019-09-23T23:45:31.846Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T00:06:36.698Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

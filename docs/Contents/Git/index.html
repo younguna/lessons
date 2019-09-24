@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>isNaN and isArray · GitBook</title>
+        <title>Git · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../JavaScript/javascript-asynchronous.html" />
+    <link rel="next" href="git_fork_to_pr.html" />
     
     
-    <link rel="prev" href="../JavaScript/const-and-immutable-array.html" />
+    <link rel="prev" href="../CS6250/l3-switching.html" />
     
 
     </head>
@@ -155,9 +155,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="isNaN-and-isArray.html">
+        <li class="chapter " data-level="1.2.4" data-path="../javascript/isNaN-and-isArray.html">
             
-                <a href="isNaN-and-isArray.html">
+                <a href="../javascript/isNaN-and-isArray.html">
             
                     
                     isNaN and isArray
@@ -328,9 +328,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../Git/">
+        <li class="chapter active" data-level="1.5" data-path="./">
             
-                <a href="../Git/">
+                <a href="./">
             
                     
                     Git
@@ -342,9 +342,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../Git/git_fork_to_pr.html">
+        <li class="chapter " data-level="1.5.1" data-path="git_fork_to_pr.html">
             
-                <a href="../Git/git_fork_to_pr.html">
+                <a href="git_fork_to_pr.html">
             
                     
                     Fork에서 PR
@@ -355,9 +355,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../Git/git_basics.html">
+        <li class="chapter " data-level="1.5.2" data-path="git_basics.html">
             
-                <a href="../Git/git_basics.html">
+                <a href="git_basics.html">
             
                     
                     Git Basics
@@ -435,7 +435,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >isNaN and isArray</a>
+        <a href="../.." >Git</a>
     </h1>
 </div>
 
@@ -450,66 +450,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="isnan-isarray-&#xB3D9;&#xC791;">isNaN() isArray() &#xB3D9;&#xC791;</h1>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> testInputs = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&quot;1&quot;</span>, <span class="hljs-string">&quot;2&quot;</span>,[<span class="hljs-number">1</span>], [<span class="hljs-string">&quot;a&quot;</span>], [], [<span class="hljs-number">1</span>,<span class="hljs-string">&quot;a&quot;</span>], [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>], <span class="hljs-literal">undefined</span>, <span class="hljs-literal">null</span>]
-
-testInputs.forEach((el)=&gt;{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;original: &quot;</span>, el);
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;!isNaN:   &quot;</span>, !<span class="hljs-built_in">isNaN</span>(el));
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;isArray:  &quot;</span>, <span class="hljs-built_in">isNaN</span>(el));
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;========================&quot;</span>)
-})
-</code></pre>
-<h3 id="&#xACB0;&#xACFC;">&#xACB0;&#xACFC;</h3>
-<pre><code class="lang-js">original:  <span class="hljs-number">0</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  <span class="hljs-number">1</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  <span class="hljs-number">2</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  <span class="hljs-number">1</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  <span class="hljs-number">2</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  [ <span class="hljs-number">1</span> ]
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  [ <span class="hljs-string">&apos;a&apos;</span> ]
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">false</span>
-isArray:   <span class="hljs-literal">true</span>
-========================
-original:  []
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-original:  [ <span class="hljs-number">1</span>, <span class="hljs-string">&apos;a&apos;</span> ]
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">false</span>
-isArray:   <span class="hljs-literal">true</span>
-========================
-original:  [ <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span> ]
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">false</span>
-isArray:   <span class="hljs-literal">true</span>
-========================
-original:  <span class="hljs-literal">undefined</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">false</span>
-isArray:   <span class="hljs-literal">true</span>
-========================
-original:  <span class="hljs-literal">null</span>
-!<span class="hljs-built_in">isNaN</span>:    <span class="hljs-literal">true</span>
-isArray:   <span class="hljs-literal">false</span>
-========================
-</code></pre>
+                                <p>Git TIL</p>
 
                                 
                                 </section>
@@ -537,12 +478,12 @@ isArray:   <span class="hljs-literal">false</span>
 
             
                 
-                <a href="../JavaScript/const-and-immutable-array.html" class="navigation navigation-prev " aria-label="Previous page: Const statement and immutable array">
+                <a href="../CS6250/l3-switching.html" class="navigation navigation-prev " aria-label="Previous page: Switching">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../JavaScript/javascript-asynchronous.html" class="navigation navigation-next " aria-label="Next page: Asynchronous">
+                <a href="git_fork_to_pr.html" class="navigation navigation-next " aria-label="Next page: Fork에서 PR">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -553,7 +494,7 @@ isArray:   <span class="hljs-literal">false</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"isNaN and isArray","level":"1.2.4","depth":2,"next":{"title":"Asynchronous","level":"1.2.5","depth":2,"path":"Contents/JavaScript/javascript-asynchronous.md","ref":"Contents/JavaScript/javascript-asynchronous.md","articles":[]},"previous":{"title":"Const statement and immutable array","level":"1.2.3","depth":2,"path":"Contents/JavaScript/const-and-immutable-array.md","ref":"Contents/JavaScript/const-and-immutable-array.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/javascript/isNaN-and-isArray.md","mtime":"2019-09-14T04:36:23.618Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T00:06:36.698Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git","level":"1.5","depth":1,"next":{"title":"Fork에서 PR","level":"1.5.1","depth":2,"path":"Contents/Git/git_fork_to_pr.md","ref":"Contents/Git/git_fork_to_pr.md","articles":[]},"previous":{"title":"Switching","level":"1.4.2","depth":2,"path":"Contents/CS6250/l3-switching.md","ref":"Contents/CS6250/l3-switching.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/Git/README.md","mtime":"2019-09-23T23:44:44.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-24T00:06:36.698Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
