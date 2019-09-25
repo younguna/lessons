@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Git · GitBook</title>
+        <title>MySQL 외부접속 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="git_fork_to_pr.html" />
+    <link rel="next" href="../Other/" />
     
     
-    <link rel="prev" href="../CS6250/l3-switching.html" />
+    <link rel="prev" href="auto-timestamp.html" />
     
 
     </head>
@@ -328,9 +328,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../Git/">
             
-                <a href="./">
+                <a href="../Git/">
             
                     
                     Git
@@ -342,9 +342,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="git_fork_to_pr.html">
+        <li class="chapter " data-level="1.5.1" data-path="../Git/git_fork_to_pr.html">
             
-                <a href="git_fork_to_pr.html">
+                <a href="../Git/git_fork_to_pr.html">
             
                     
                     Fork에서 PR
@@ -355,9 +355,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="git_basics.html">
+        <li class="chapter " data-level="1.5.2" data-path="../Git/git_basics.html">
             
-                <a href="git_basics.html">
+                <a href="../Git/git_basics.html">
             
                     
                     Git Basics
@@ -373,9 +373,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../DB/">
+        <li class="chapter " data-level="1.6" data-path="./">
             
-                <a href="../DB/">
+                <a href="./">
             
                     
                     DB/SQL
@@ -387,9 +387,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../DB/unique-constraint.html">
+        <li class="chapter " data-level="1.6.1" data-path="unique-constraint.html">
             
-                <a href="../DB/unique-constraint.html">
+                <a href="unique-constraint.html">
             
                     
                     Unique 제약
@@ -400,9 +400,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../DB/auto-timestamp.html">
+        <li class="chapter " data-level="1.6.2" data-path="auto-timestamp.html">
             
-                <a href="../DB/auto-timestamp.html">
+                <a href="auto-timestamp.html">
             
                     
                     Auto Timestamp
@@ -413,9 +413,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../DB/mysql-remote-access.html">
+        <li class="chapter active" data-level="1.6.3" data-path="mysql-remote-access.html">
             
-                <a href="../DB/mysql-remote-access.html">
+                <a href="mysql-remote-access.html">
             
                     
                     MySQL 외부접속
@@ -493,7 +493,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Git</a>
+        <a href="../.." >MySQL 외부접속</a>
     </h1>
 </div>
 
@@ -508,7 +508,27 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>Git TIL</p>
+                                <h1 id="mysql-&#xC678;&#xBD80;&#xB85C;-3306-&#xD3EC;&#xD2B8;-&#xB178;&#xCD9C;&#xD558;&#xAE30;">MySQL &#xC678;&#xBD80;&#xB85C; 3306 &#xD3EC;&#xD2B8; &#xB178;&#xCD9C;&#xD558;&#xAE30;</h1>
+<blockquote>
+<p>&#xC808;&#xB300;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC548;&#xB418;&#xB294; &#xBC29;&#xBC95;&#xC774;&#xB098; MySQL&#xB97C; &#xC774;&#xD574;&#xD558;&#xB294;&#xB370; &#xC870;&#xAE08; &#xB3C4;&#xC6C0;&#xC744; &#xC904; &#xC218;&#xB294; &#xC788;&#xC74C;</p>
+</blockquote>
+<p>&#xAC00;&#xC815;1: cloud &#xC11C;&#xBC84;&#xC5D0; MySQL&#xC774; &#xC791;&#xB3D9;&#xC911;</p>
+<ol>
+<li>Cloud &#xC11C;&#xBC84;&#xC758; &#xBCF4;&#xC548;&#xADF8;&#xB8F9;&#xACFC; &#xAC19;&#xC740; &#xC124;&#xC815;&#xC5D0;&#xC11C; 3306&#xC744; &#xC6D0;&#xD558;&#xB294; &#xD639;&#xC740; &#xBAA8;&#xB4E0; IP&#xC5D0;&#xC11C;&#xC758; inbound &#xC811;&#xADFC;&#xC744; &#xD5C8;&#xC6A9;&#xD55C;&#xB2E4;.</li>
+<li><code>/etc/mysql/mysql.conf.d/mysqld.cnf</code>&#xC744; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC218;&#xC815;&#xD55C;&#xB2E4;.<ul>
+<li><code>bind-address = 127.0.0.1</code> &#xC774;&#xBD80;&#xBD84;&#xC744; <code>bind-address = 0.0.0.0</code>&#xC73C;&#xB85C; &#xC218;&#xC815;&#xD55C;&#xB2E4;.</li>
+</ul>
+</li>
+<li><code>sudo systemctl restart mysql.service</code>&#xB85C; mysql&#xC744; &#xC7AC;&#xC2DC;&#xC791;&#xD55C;&#xB2E4;.</li>
+<li>MySQL &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xB85C; ssh &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xB85C; &#xC811;&#xC18D;&#xD55C;&#xB2E4;.</li>
+<li>MySQL&#xC758; root&#xACC4;&#xC815;&#xC740; &#xC678;&#xBD80;&#xC5D0;&#xC11C; &#xC811;&#xADFC;&#xC774; &#xC808;&#xB300;&#xB85C; &#xBD88;&#xAC00;&#xD558;&#xBBC0;&#xB85C; &#xC0C8;&#xB85C;&#xC6B4; &#xACC4;&#xC815;&#xC744; &#xC0DD;&#xC131;&#xD558;&#xC5EC; &#xC678;&#xBD80; &#xC811;&#xC18D; &#xAD8C;&#xD55C;&#xC744; &#xC900;&#xB2E4;.<ol>
+<li><code>CREATE USER &#x2018;newusername&#x2019;@&#x2018;%&#x2019; IDENTIFIED BY &#x2018;newpassword&#x2019;;</code> </li>
+<li><code>GRANT ALL PRIVILEGES ON *.* TO &#x2018;newusername&#x2019;@&#x2018;%&#x2019;</code> &#xBAA8;&#xB4E0; DB&#xC758; &#xBAA8;&#xB4E0; TABLE &#xD5C8;&#xC6A9;</li>
+<li><code>GRANT ALL PRIVILEGES ON database.table TO &#x2018;newusername&#x2019;@&#x2018;%&#x2019;</code> database&#xB77C;&#xB294; &#xC774;&#xB984;&#xC758; DB&#xC758; table&#xC774;&#xB77C;&#xB294; TABLE &#xD5C8;&#xC6A9;</li>
+<li><code>GRANT ALL PRIVILEGES ON database.* TO &#x2018;newusername&#x2019;@&#x2018;%&#x2019;</code> database&#xB77C;&#xB294; DB&#xC758; &#xBAA8;&#xB4E0; TABLE &#xD5C8;&#xC6A9;</li>
+</ol>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -536,12 +556,12 @@
 
             
                 
-                <a href="../CS6250/l3-switching.html" class="navigation navigation-prev " aria-label="Previous page: Switching">
+                <a href="auto-timestamp.html" class="navigation navigation-prev " aria-label="Previous page: Auto Timestamp">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="git_fork_to_pr.html" class="navigation navigation-next " aria-label="Next page: Fork에서 PR">
+                <a href="../Other/" class="navigation navigation-next " aria-label="Next page: Other">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -552,7 +572,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Git","level":"1.5","depth":1,"next":{"title":"Fork에서 PR","level":"1.5.1","depth":2,"path":"Contents/Git/git_fork_to_pr.md","ref":"Contents/Git/git_fork_to_pr.md","articles":[]},"previous":{"title":"Switching","level":"1.4.2","depth":2,"path":"Contents/CS6250/l3-switching.md","ref":"Contents/CS6250/l3-switching.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/Git/README.md","mtime":"2019-09-23T23:44:44.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-25T00:03:31.304Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MySQL 외부접속","level":"1.6.3","depth":2,"next":{"title":"Other","level":"1.7","depth":1,"path":"Contents/Other/README.md","ref":"Contents/Other/README.md","articles":[{"title":"\"그런 REST API로 괜찮은가\"를 보고","level":"1.7.1","depth":2,"path":"Contents/Other/is_it_rest.md","ref":"Contents/Other/is_it_rest.md","articles":[]}]},"previous":{"title":"Auto Timestamp","level":"1.6.2","depth":2,"path":"Contents/DB/auto-timestamp.md","ref":"Contents/DB/auto-timestamp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/DB/mysql-remote-access.md","mtime":"2019-09-24T23:59:51.151Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-25T00:03:31.304Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
