@@ -26,3 +26,4 @@
     * [MySQL 외부접속](Contents/DB/mysql-remote-access.md)
 * [Other](Contents/Other/README.md)
     * ["그런 REST API로 괜찮은가"를 보고](Contents/Other/is_it_rest.md)
+    * [Socket.io server cheatsheet](Contents/Other/socket.io.md)

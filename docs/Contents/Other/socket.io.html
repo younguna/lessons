@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Unique 제약 · GitBook</title>
+        <title>Socket.io server cheatsheet · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="auto-timestamp.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="is_it_rest.html" />
     
 
     </head>
@@ -373,9 +371,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../DB/">
             
-                <a href="./">
+                <a href="../DB/">
             
                     
                     DB/SQL
@@ -387,9 +385,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.6.1" data-path="unique-constraint.html">
+        <li class="chapter " data-level="1.6.1" data-path="../DB/unique-constraint.html">
             
-                <a href="unique-constraint.html">
+                <a href="../DB/unique-constraint.html">
             
                     
                     Unique 제약
@@ -400,9 +398,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="auto-timestamp.html">
+        <li class="chapter " data-level="1.6.2" data-path="../DB/auto-timestamp.html">
             
-                <a href="auto-timestamp.html">
+                <a href="../DB/auto-timestamp.html">
             
                     
                     Auto Timestamp
@@ -413,9 +411,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="mysql-remote-access.html">
+        <li class="chapter " data-level="1.6.3" data-path="../DB/mysql-remote-access.html">
             
-                <a href="mysql-remote-access.html">
+                <a href="../DB/mysql-remote-access.html">
             
                     
                     MySQL 외부접속
@@ -431,9 +429,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../Other/">
+        <li class="chapter " data-level="1.7" data-path="./">
             
-                <a href="../Other/">
+                <a href="./">
             
                     
                     Other
@@ -445,9 +443,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../Other/is_it_rest.html">
+        <li class="chapter " data-level="1.7.1" data-path="is_it_rest.html">
             
-                <a href="../Other/is_it_rest.html">
+                <a href="is_it_rest.html">
             
                     
                     "그런 REST API로 괜찮은가"를 보고
@@ -458,9 +456,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../Other/socket.io.html">
+        <li class="chapter active" data-level="1.7.2" data-path="socket.io.html">
             
-                <a href="../Other/socket.io.html">
+                <a href="socket.io.html">
             
                     
                     Socket.io server cheatsheet
@@ -506,7 +504,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Unique 제약</a>
+        <a href="../.." >Socket.io server cheatsheet</a>
     </h1>
 </div>
 
@@ -521,28 +519,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="sql-unique-&#xC81C;&#xC57D;">SQL Unique &#xC81C;&#xC57D;</h1>
-<h2 id="&#xC0DD;&#xC131;&#xD558;&#xAE30;">&#xC0DD;&#xC131;&#xD558;&#xAE30;</h2>
-<pre><code class="lang-sql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> Persons
-(
-    <span class="hljs-keyword">ID</span> <span class="hljs-built_in">int</span> <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
-    <span class="hljs-keyword">Name</span> <span class="hljs-built_in">varchar</span>(<span class="hljs-number">255</span>) <span class="hljs-keyword">NOT</span> <span class="hljs-literal">NULL</span>,
-    <span class="hljs-keyword">CONSTRAINT</span> uc_PersonID <span class="hljs-keyword">UNIQUE</span> (<span class="hljs-keyword">ID</span>)
-)
+                                <h1 id="server-side-socketio-&#xD1B5;&#xC2E0;-cheatsheet">server side socket.io &#xD1B5;&#xC2E0; cheatsheet</h1>
+<h4 id="sender-&#xD55C;&#xBA85;&#xC5D0;&#xAC8C;socket&#xC5B4;&#xAC8C;-&#xC1A1;&#xC2E0;">sender &#xD55C;&#xBA85;&#xC5D0;&#xAC8C;(socket)&#xC5B4;&#xAC8C; &#xC1A1;&#xC2E0;</h4>
+<pre><code class="lang-javascript">socket.emit(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-string">&quot;this is a test&quot;</span>);
 </code></pre>
-<h2 id="&#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xB85C;-&#xC124;&#xC815;">&#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xB85C; &#xC124;&#xC815;</h2>
-<pre><code class="lang-sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Persons
-<span class="hljs-keyword">ADD</span> <span class="hljs-keyword">CONSTRAINT</span> uc_PersonID <span class="hljs-keyword">UNIQUE</span> (<span class="hljs-keyword">ID</span>)
+<h4 id="sender&#xB97C;-&#xD3EC;&#xD568;&#xD55C;-&#xBAA8;&#xB4E0;-client&#xB4E4;&#xC5D0;&#xAC8C;-&#xC1A1;&#xC2E0;">sender&#xB97C; &#xD3EC;&#xD568;&#xD55C; &#xBAA8;&#xB4E0; client&#xB4E4;&#xC5D0;&#xAC8C; &#xC1A1;&#xC2E0;</h4>
+<pre><code class="lang-javascript">io.emit(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-string">&quot;this is a test&quot;</span>);
 </code></pre>
-<h2 id="uniqe-&#xC81C;&#xC57D;-&#xC81C;&#xAC70;">Uniqe &#xC81C;&#xC57D; &#xC81C;&#xAC70;</h2>
-<pre><code class="lang-sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">TABLE</span> Persons
-<span class="hljs-keyword">DROP</span> <span class="hljs-keyword">CONSTRAINT</span> uc_PersonID
+<h4 id="sender&#xB97C;-&#xC81C;&#xC678;&#xD55C;-&#xBAA8;&#xB4E0;-client&#xB4E4;&#xC5D0;&#xAC8C;-&#xC1A1;&#xC2E0;">sender&#xB97C; &#xC81C;&#xC678;&#xD55C; &#xBAA8;&#xB4E0; client&#xB4E4;&#xC5D0;&#xAC8C; &#xC1A1;&#xC2E0;</h4>
+<pre><code class="lang-javascript">socket.broadcast.emit(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-string">&quot;this is a test&quot;</span>);
 </code></pre>
-<blockquote>
-<p>PRIMARY KEY &#xC81C;&#xC57D;&#xC740; &#xC790;&#xB3D9;&#xC801;&#xC73C;&#xB85C; UNIQUE &#xC81C;&#xC57D;&#xC774; &#xC124;&#xC815;&#xB428;
-UNIQUE &#xB294; &#xD55C; &#xD14C;&#xC774;&#xBE14;&#xC5D0; &#xC5EC;&#xB7EC;&#xAC1C;&#xB97C; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC74C;
-PRIMARY KEY &#xC81C;&#xC57D;&#xC740; &#xC624;&#xB85C;&#xC9C0; 1&#xAC1C; &#xB9CC; &#xC9C0;&#xC815;&#xD560; &#xC218; &#xC788;&#xC74C;</p>
-</blockquote>
+<h4 id="sender&#xB97C;-&#xC81C;&#xC678;&#xD55C;-game&#xC774;&#xB77C;&#xB294;-room&#xC758;-&#xBAA8;&#xB4E0;-client&#xB4E4;&#xC5D0;&#xAC8C;-&#xC1A1;&#xC2E0;">sender&#xB97C; &#xC81C;&#xC678;&#xD55C; game&#xC774;&#xB77C;&#xB294; room&#xC758; &#xBAA8;&#xB4E0; client&#xB4E4;&#xC5D0;&#xAC8C; &#xC1A1;&#xC2E0;</h4>
+<pre><code class="lang-javascript">socket.broadcast.to(<span class="hljs-string">&apos;game&apos;</span>).emit(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-string">&apos;nice game&apos;</span>);
+</code></pre>
+<h4 id="sender&#xB97C;-&#xD3EC;&#xD568;&#xD55C;-game&#xC774;&#xB77C;&#xB294;-room&#xC758;-&#xBAA8;&#xB4E0;-client&#xB4E4;&#xC5D0;&#xAC8C;-&#xC1A1;&#xC2E0;">sender&#xB97C; &#xD3EC;&#xD568;&#xD55C; game&#xC774;&#xB77C;&#xB294; room&#xC758; &#xBAA8;&#xB4E0; client&#xB4E4;&#xC5D0;&#xAC8C; &#xC1A1;&#xC2E0;</h4>
+<pre><code class="lang-javascript">io.in(<span class="hljs-string">&apos;game&apos;</span>).emit(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-string">&apos;cool game&apos;</span>);
+</code></pre>
+<h4 id="sender&#xC5D0;&#xAC8C;-&#xC1A1;&#xC2E0;&#xD558;&#xB418;-game&#xC774;&#xB77C;&#xB294;-room&#xC5D0;-&#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xBA74;-&#xC1A1;&#xC2E0;">sender&#xC5D0;&#xAC8C; &#xC1A1;&#xC2E0;&#xD558;&#xB418; game&#xC774;&#xB77C;&#xB294; room&#xC5D0; &#xC874;&#xC7AC;&#xD55C;&#xB2E4;&#xBA74; &#xC1A1;&#xC2E0;</h4>
+<pre><code class="lang-javascript">socket.to(<span class="hljs-string">&apos;game&apos;</span>).emit(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-string">&apos;enjoy the game&apos;</span>);
+</code></pre>
+<h4 id="mynamespace&#xB77C;&#xB294;-namespace&#xC758;-&#xBAA8;&#xB4E0;-client&#xB4E4;&#xC5D0;&#xAC8C;-&#xC1A1;&#xC2E0;">myNamespace&#xB77C;&#xB294; namespace&#xC758; &#xBAA8;&#xB4E0; client&#xB4E4;&#xC5D0;&#xAC8C; &#xC1A1;&#xC2E0;</h4>
+<pre><code class="lang-javascript">io.of(<span class="hljs-string">&apos;myNamespace&apos;</span>).emit(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-string">&apos;gg&apos;</span>);
+</code></pre>
+<h4 id="socketid&#xB97C;-&#xAC00;&#xC9C4;-client&#xC5D0;&#xAC8C;-&#xC1A1;&#xC2E0;">socketId&#xB97C; &#xAC00;&#xC9C4; client&#xC5D0;&#xAC8C; &#xC1A1;&#xC2E0;</h4>
+<pre><code class="lang-javascript">socket.broadcast.to(socketId).emit(<span class="hljs-string">&apos;message&apos;</span>, <span class="hljs-string">&apos;for your eyes only&apos;</span>);
+</code></pre>
+<h4 id="socketid&#xB9AC;&#xC2A4;&#xD2B8;&#xB97C;-iterate">socketId&#xB9AC;&#xC2A4;&#xD2B8;&#xB97C; iterate</h4>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Object</span>.keys(io.sockets.sockets).forEach((socketId) =&gt; {});
+</code></pre>
 
                                 
                                 </section>
@@ -570,14 +574,10 @@ PRIMARY KEY &#xC81C;&#xC57D;&#xC740; &#xC624;&#xB85C;&#xC9C0; 1&#xAC1C; &#xB9CC;
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: DB/SQL">
+                <a href="is_it_rest.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: "그런 REST API로 괜찮은가"를 보고">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="auto-timestamp.html" class="navigation navigation-next " aria-label="Next page: Auto Timestamp">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -586,7 +586,7 @@ PRIMARY KEY &#xC81C;&#xC57D;&#xC740; &#xC624;&#xB85C;&#xC9C0; 1&#xAC1C; &#xB9CC;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Unique 제약","level":"1.6.1","depth":2,"next":{"title":"Auto Timestamp","level":"1.6.2","depth":2,"path":"Contents/DB/auto-timestamp.md","ref":"Contents/DB/auto-timestamp.md","articles":[]},"previous":{"title":"DB/SQL","level":"1.6","depth":1,"path":"Contents/DB/README.md","ref":"Contents/DB/README.md","articles":[{"title":"Unique 제약","level":"1.6.1","depth":2,"path":"Contents/DB/unique-constraint.md","ref":"Contents/DB/unique-constraint.md","articles":[]},{"title":"Auto Timestamp","level":"1.6.2","depth":2,"path":"Contents/DB/auto-timestamp.md","ref":"Contents/DB/auto-timestamp.md","articles":[]},{"title":"MySQL 외부접속","level":"1.6.3","depth":2,"path":"Contents/DB/mysql-remote-access.md","ref":"Contents/DB/mysql-remote-access.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/DB/unique-constraint.md","mtime":"2019-09-24T23:59:04.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-19T00:41:26.713Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Socket.io server cheatsheet","level":"1.7.2","depth":2,"previous":{"title":"\"그런 REST API로 괜찮은가\"를 보고","level":"1.7.1","depth":2,"path":"Contents/Other/is_it_rest.md","ref":"Contents/Other/is_it_rest.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Contents/Other/socket.io.md","mtime":"2019-11-19T00:40:25.151Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-19T00:41:26.713Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
